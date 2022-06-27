@@ -64,7 +64,7 @@ class RepoDetailFragment : BaseFragment<RepoDetailViewModel, RepoDetailFragmentB
 
     private fun setData(repoItem: RepoItemViewEntity) {
         with(binding) {
-            repoItem.avatarUrl.let { userAvatar.loadImage(it) }
+            repoItem.avatarUrl?.let { userAvatar.loadImage(it) }
             userName.text = repoItem.login
             stars.setFieldData(
                 getString(STARS_LABEL_TEXT),

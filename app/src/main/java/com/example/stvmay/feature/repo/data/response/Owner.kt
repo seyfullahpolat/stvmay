@@ -1,11 +1,13 @@
 package com.example.stvmay.feature.repo.data.response
 
 import android.os.Parcelable
+import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Owner(
-    val avatar_url: String, // https://avatars.githubusercontent.com/u/5182289?v=4
+    @SerializedName("avatar_url")
+    val avatar_url: String?,
     val events_url: String? = null, // https://api.github.com/users/kobeumut/events{/privacy}
     val followers_url: String? = null, // https://api.github.com/users/kobeumut/followers
     val following_url: String? = null, // https://api.github.com/users/kobeumut/following{/other_user}
@@ -13,6 +15,8 @@ data class Owner(
     val gravatar_id: String? = null,
     val html_url: String? = null, // https://github.com/kobeumut
     val id: Long? = 0, // 5182289
+
+    @SerializedName("login")
     val login: String, // kobeumut
     val node_id: String? = null, // MDQ6VXNlcjUxODIyODk=
     val organizations_url: String? = null, // https://api.github.com/users/kobeumut/orgs

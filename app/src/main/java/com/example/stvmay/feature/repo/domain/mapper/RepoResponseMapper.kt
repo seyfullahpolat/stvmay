@@ -12,8 +12,8 @@ fun RepoResponseItem.toViewEntity() = RepoItemViewEntity(
     id = this.id,
     name = this.name,
     isFavorite = this.isFavorite,
-    login = this.owner.login,
+    login = this.owner?.login ?: "",
     stargazersCount = this.stargazers_count ?: 0,
     openIssuesCount = this.open_issues_count ?: 0,
-    avatarUrl = this.owner.avatar_url
+    avatarUrl = this.owner?.avatar_url ?: ""
 )

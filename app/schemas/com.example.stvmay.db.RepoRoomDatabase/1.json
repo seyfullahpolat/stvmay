@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "22af47e0c25f758fd5aa85d99144c3e6",
+    "identityHash": "4e28bfb8507ea2aa5614c2f3ba9ff9ba",
     "entities": [
       {
         "tableName": "RepoFavoriteItem",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`repo_id` INTEGER NOT NULL, `repo_name` TEXT NOT NULL, `is_favorite` INTEGER NOT NULL, `createdAt` INTEGER, `updatedAt` INTEGER, PRIMARY KEY(`repo_id`))",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`repo_id` INTEGER NOT NULL, `repo_name` TEXT, `is_favorite` INTEGER NOT NULL, `createdAt` INTEGER, `updatedAt` INTEGER, PRIMARY KEY(`repo_id`))",
         "fields": [
           {
             "fieldPath": "id",
@@ -18,7 +18,7 @@
             "fieldPath": "repoName",
             "columnName": "repo_name",
             "affinity": "TEXT",
-            "notNull": true
+            "notNull": false
           },
           {
             "fieldPath": "isFavorite",
@@ -52,7 +52,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '22af47e0c25f758fd5aa85d99144c3e6')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '4e28bfb8507ea2aa5614c2f3ba9ff9ba')"
     ]
   }
 }

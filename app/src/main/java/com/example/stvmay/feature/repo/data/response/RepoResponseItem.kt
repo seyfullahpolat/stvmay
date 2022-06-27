@@ -1,6 +1,7 @@
 package com.example.stvmay.feature.repo.data.response
 
 import android.os.Parcelable
+import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -42,6 +43,7 @@ data class RepoResponseItem(
     val homepage: String? = null, // https://activeadmin.info
     val hooks_url: String? = null, // https://api.github.com/repos/kobeumut/activeadmin/hooks
     val html_url: String? = null, // https://github.com/kobeumut/activeadmin
+    @SerializedName("id")
     val id: Long, // 108245073
     val is_template: Boolean? = false, // false
     val issue_comment_url: String? = null, // https://api.github.com/repos/kobeumut/activeadmin/issues/comments{/number}
@@ -54,18 +56,23 @@ data class RepoResponseItem(
     val license: License? = null,
     val merges_url: String? = null, // https://api.github.com/repos/kobeumut/activeadmin/merges
     val milestones_url: String? = null, // https://api.github.com/repos/kobeumut/activeadmin/milestones{/number}
+    @SerializedName("name")
     val name: String, // activeadmin
     val node_id: String? = null, // MDEwOlJlcG9zaXRvcnkxMDgyNDUwNzM=
     val notifications_url: String? = null, // https://api.github.com/repos/kobeumut/activeadmin/notifications{?since,all,participating}
     val open_issues: Int? = 0, // 0
+    @SerializedName("open_issues_count")
     val open_issues_count: Int? = 0, // 0
-    val owner: Owner,
+    @SerializedName("owner")
+    val owner: Owner?,
     val `private`: Boolean? = false, // false
     val pulls_url: String? = null, // https://api.github.com/repos/kobeumut/activeadmin/pulls{/number}
     val pushed_at: String? = null, // 2017-12-21T09:12:15Z
     val releases_url: String? = null, // https://api.github.com/repos/kobeumut/activeadmin/releases{/id}
     val size: Int? = 0, // 7391
     val ssh_url: String? = null, // git@github.com:kobeumut/activeadmin.git
+
+    @SerializedName("stargazers_count")
     val stargazers_count: Int? = 0, // 0
     val stargazers_url: String? = null, // https://api.github.com/repos/kobeumut/activeadmin/stargazers
     val statuses_url: String? = null, // https://api.github.com/repos/kobeumut/activeadmin/statuses/{sha}

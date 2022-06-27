@@ -11,10 +11,10 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class RepoItemViewEntity(
     val id: Long,
-    val name: String,
-    val avatarUrl: String,
+    val name: String?,
+    val avatarUrl: String?,
     val stargazersCount: Int,
     val openIssuesCount: Int,
-    val login: String,
+    val login: String?,
     var isFavorite: Boolean
 ) : BaseViewEntity()

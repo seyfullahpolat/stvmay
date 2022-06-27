@@ -19,7 +19,7 @@ data class RepoFavoriteItem(
     val id: Long,
 
     @ColumnInfo(name = "repo_name")
-    var repoName: String,
+    var repoName: String?,
 
     @ColumnInfo(name = "is_favorite")
     var isFavorite: Boolean,

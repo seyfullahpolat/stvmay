@@ -34,7 +34,7 @@ class RepoListFragment : BaseFragment<RepoListViewModel, RepoListFragmentBinding
         repoListAdapter.apply {
             showRepoDetail = { item ->
                 val action = RepoListFragmentDirections.repoListFragmentToRepoDetailFragment(
-                    item.name,
+                    item.name ?: "",
                     item
                 )
                 findNavController().navigate(action)
