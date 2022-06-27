@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">stvmay</string>
+    <!--General -->
+    <string name="general_connection_exception">Connection error</string>
+    <string name="record_not_found">Record not found</string>
+    <string name="internet_connection">Connection error</string>
+
+    <!--Info -->
+    <string name="action_ok">OK</string>
+    <string name="info">info</string>
+
+    <string name="favorite_state">favorite state</string>
+    <string name="search_repo_by_username">Search repo by username</string>
+    <string name="find_repos">Find Repos</string>
+    <string name="two_dots">: </string>
+    <string name="stars">Stars</string>
+    <string name="open_issues">Open issues</string>
+    <string name="repo_count">Repo count</string>
+    <string name="following">Following</string>
+    <string name="followers">Followers</string>
 </resources>

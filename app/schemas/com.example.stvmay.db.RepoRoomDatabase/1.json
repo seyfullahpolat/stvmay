@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "22af47e0c25f758fd5aa85d99144c3e6",
+    "entities": [
+      {
+        "tableName": "RepoFavoriteItem",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`repo_id` INTEGER NOT NULL, `repo_name` TEXT NOT NULL, `is_favorite` INTEGER NOT NULL, `createdAt` INTEGER, `updatedAt` INTEGER, PRIMARY KEY(`repo_id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "repo_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "repoName",
+            "columnName": "repo_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isFavorite",
+            "columnName": "is_favorite",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "updatedAt",
+            "columnName": "updatedAt",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "repo_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '22af47e0c25f758fd5aa85d99144c3e6')"
+    ]
+  }
+}

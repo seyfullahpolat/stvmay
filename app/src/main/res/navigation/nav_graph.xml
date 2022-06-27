@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/repoListFragment">
+
+    <fragment
+        android:id="@+id/repoListFragment"
+        android:name="com.example.stvmay.feature.repo.presentation.repolist.RepoListFragment"
+        android:label="Repo List"
+        tools:layout="@layout/repo_list_fragment">
+        <action
+            android:id="@+id/repoListFragment_to_repoDetailFragment"
+            app:destination="@id/repoDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/repoDetailFragment"
+        android:name="com.example.stvmay.feature.repo.presentation.repodetail.RepoDetailFragment"
+        android:label="{title}"
+        tools:layout="@layout/repo_detail_fragment">
+        <argument
+            android:name="title"
+            app:argType="string" />
+
+        <argument
+            android:name="repo_item"
+            app:argType="com.example.stvmay.feature.repo.domain.entity.RepoItemViewEntity" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/infoBottomSheet"
+        android:name="com.example.stvmay.feature.bottomsheetinfo.InfoBottomSheetFragment"
+        android:label=""
+        tools:layout="@layout/info_bottom_sheet_fragment">
+        <argument
+            android:name="infoBottomSheetData"
+            app:argType="com.example.stvmay.feature.bottomsheetinfo.InfoBottomSheetData" />
+    </dialog>
+    <action
+        android:id="@+id/showInfoBottomSheet"
+        app:destination="@id/infoBottomSheet" />
+
+</navigation>

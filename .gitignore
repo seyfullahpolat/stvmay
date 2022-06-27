@@ -1,7 +1,7 @@
 # Built application files
-=======
 /local.properties
 /.idea/caches
+/.idea/misc.xml
 /.idea/libraries
 /.idea/modules.xml
 /.idea/workspace.xml
@@ -95,3 +95,4 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+/.idea/
